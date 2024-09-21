@@ -1,28 +1,69 @@
 
-#include<iostream>
+
+#include <iostream>
+#include <windows.h>
 #include<iomanip>
-#include<Windows.h>
+#include <locale>
+#include <string>
 
 
 
+#include"Header.h"
 using namespace std;
 
 
 int main() {
-	cout << "Hello World!" << endl;
+	SetConsoleOutputCP(CP_UTF8);
+	std::setlocale(LC_ALL, "Russian");
+
+	string word;
+	
+	cin >> word;
+	cout << word.length()  << endl;
+	
+	int number = word.length();
+	cout << number << endl;
+
+	char letter;
+	cin >> letter;
+
+	/*cout << endl;
+	cout <<" O" << endl;
+	cout << "/|\\" << endl;
+	cout << "/ \\ " << endl;
+
+	cout << endl;
+	cout << " O" << endl;
+	cout << "/|\\" << endl;
+	cout << "/ \\  |" << endl;
+	cout << "     |" << endl;
+	cout << "======" << endl;
 
 
+	cout << endl;
+	cout << " O   |" << endl;
+	cout << "/|\\  |" << endl;
+	cout << "/ \\  |" << endl;
+	cout << "     |" << endl;
+	cout << "======" << endl;
 
+	cout << endl;
+	cout << "     *" << endl;
+	cout << "     |" << endl;
+	cout << " O   |" << endl;
+	cout << "/|\\  |" << endl;
+	cout << "/ \\  |" << endl;
+	cout << "     |" << endl;
+	cout << "======" << endl;
 
-
-
-
-	for (size_t i = 0; i < 10; i++)
-	{
-		cout << ")" << endl;
-	}
-
-
+	cout << endl;
+	cout << " *---*" << endl;
+	cout << " |   |" << endl;
+	cout << " O   |" << endl;
+	cout << "/|\\  |" << endl;
+	cout << "/ \\  |" << endl;
+	cout << "     |" << endl;
+	cout << "======" << endl;*/
 
 
 
