@@ -29,4 +29,3 @@ char* SplitWord(string word)
 //
 //}
 //h  e  l  l  o
-//[[h],[e],[l],[l],[o]]
