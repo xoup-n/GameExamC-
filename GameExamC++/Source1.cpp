@@ -9,7 +9,7 @@
 
 
 
-#include "Funcs.h"
+#include "Funcss.h"
 
 using namespace std;
 
@@ -23,10 +23,13 @@ int main() {
 
 
     string word;
+    int len = word.length();
     cout << "Enter the word: " << endl;
     cin >> word;
     cout << word << endl;
-    cout << SplitWord(word) << endl;
+ 
+
+    
 
 
     /*cout << endl;
