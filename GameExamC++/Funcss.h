@@ -8,7 +8,6 @@ using namespace std;
 
 char* SplitWord(string word, char*& letters1)
 {
-
     int len = word.length();
     char* letters = new char[len + 1];
     for (int i = 0; i < len; i++)
@@ -22,18 +21,60 @@ char* SplitWord(string word, char*& letters1)
 }
 
 
-int checking(char letters1[], string word, char letter)
+int checking(char letters1[], string word, char letter, int index[], int max_size)
 {
     int quantity = 0;
     int number = word.length();
-    for (int i = 0; i < number; i++)
+    for (int i = 0; i < number && quantity < max_size; i++)
     {
         if (letter == letters1[i])
         {
-            cout << letter << endl;
+            index[quantity] = i;
             quantity++;
         }
-
     }
+
     return quantity;
+}
+
+void Human(int number)
+{
+    switch (number)
+    {
+    case 1:
+        cout << " O" << endl;
+        cout << "/|\\" << endl;
+        cout << "/ \\  |" << endl;
+        cout << "     |" << endl;
+        cout << "======" << endl;
+        break;
+    case 2:
+        cout << " O   |" << endl;
+        cout << "/|\\  |" << endl;
+        cout << "/ \\  |" << endl;
+        cout << "     |" << endl;
+        cout << "======" << endl;
+        break;
+    case 3:
+        cout << "     *" << endl;
+        cout << "     |" << endl;
+        cout << " O   |" << endl;
+        cout << "/|\\  |" << endl;
+        cout << "/ \\  |" << endl;
+        cout << "     |" << endl;
+        cout << "======" << endl;
+        break;
+    case 4:
+        cout << " *---*" << endl;
+        cout << " |   |" << endl;
+        cout << " O   |" << endl;
+        cout << "/|\\  |" << endl;
+        cout << "/ \\  |" << endl;
+        cout << "     |" << endl;
+        cout << "======" << endl;
+        break;
+    default:
+        cout << "Игра окончена!" << endl;
+        break;
+    }
 }
